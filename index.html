@@ -383,6 +383,25 @@
   .proj-card:hover{
     transform:translateY(-6px);
   }
+  .proj-img-wrap{
+    width:100%;
+    height:180px;
+    border-radius:8px;
+    overflow:hidden;
+    margin-bottom:20px;
+    background:rgba(0,0,0,0.2);
+    border:1px solid var(--line);
+  }
+  .proj-img-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .proj-card:hover .proj-img-wrap img{
+    transform:scale(1.05);
+  }
   .proj-index{
     font-family:var(--mono); font-size:12px; color:var(--accent);
     margin-bottom:14px;
@@ -578,6 +597,59 @@
     display:flex; justify-content:center; gap:16px; flex-wrap:wrap;
     margin-bottom:60px;
   }
+
+  /* ---------- Badges ---------- */
+  .badges-showcase{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:40px;
+    padding:40px;
+    align-items:center;
+  }
+  .badges-img-wrap{
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:rgba(0,0,0,0.3);
+  }
+  .badges-img-wrap img{
+    width:100%;
+    height:auto;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .badges-showcase:hover .badges-img-wrap img{
+    transform:scale(1.02);
+  }
+  .badges-content h3{
+    font-family:var(--display);
+    font-size:1.6rem;
+    font-weight:700;
+    margin-bottom:16px;
+    color:var(--ink);
+  }
+  .badges-desc{
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    margin-bottom:24px;
+    line-height:1.6;
+  }
+  .badge-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .badge-tags span{
+    font-size:12px;
+    font-family:var(--mono);
+    background:var(--accent-dim);
+    color:var(--accent);
+    padding:6px 12px;
+    border-radius:6px;
+    border:1px solid rgba(204,255,0,0.15);
+  }
+
   footer{
     text-align:center; padding:28px 0;
     font-family:var(--mono); font-size:12.5px; color:var(--ink-muted);
@@ -613,6 +685,7 @@
     .ach-grid{grid-template-columns:1fr;}
     .cert-grid{grid-template-columns:1fr;}
     .edu-card{grid-template-columns:1fr;}
+    .badges-showcase{grid-template-columns:1fr; padding:24px; gap:24px;}
     .nav-links{
       position:fixed; top:64px; left:0; right:0;
       background:rgba(10,10,11,0.95);
@@ -656,6 +729,7 @@
       <li><a href="#skills">skills</a></li>
       <li><a href="#achievements">achievements</a></li>
       <li><a href="#certifications">certifications</a></li>
+      <li><a href="#badges">badges</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </nav>
@@ -790,6 +864,9 @@ Based in Pune, targeting Pune / Mumbai</div>
     <div class="proj-grid">
       <div class="proj-card glass-card reveal">
         <div class="proj-index">01</div>
+        <div class="proj-img-wrap">
+          <img src="project_cicd.png" alt="Automated CI/CD Pipeline" loading="lazy">
+        </div>
         <h3>Automated CI/CD Pipeline</h3>
         <div class="period">Jun 2024 – Aug 2024</div>
         <ul>
@@ -798,11 +875,20 @@ Based in Pune, targeting Pune / Mumbai</div>
           <li>Bash-scripted Linux agents cut manual deployment effort by 60%+.</li>
           <li>Automated rollback mechanisms for reliability.</li>
         </ul>
+        <div class="proj-link-wrap">
+          <a href="https://cicd-pipeline-f5fd.onrender.com" target="_blank" rel="noopener" class="proj-link">
+            Live Demo
+            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9 9-1.41-1.41 9-9H14V3zm-2 2H5v14h14v-7h2v9H3V3h9v2z"/></svg>
+          </a>
+        </div>
         <div class="stack"><span>Jenkins</span><span>Docker</span><span>Linux</span><span>Git</span><span>Bash</span></div>
       </div>
 
       <div class="proj-card glass-card reveal">
         <div class="proj-index">02</div>
+        <div class="proj-img-wrap">
+          <img src="project_analytics.png" alt="Distributed Data Analytics Platform" loading="lazy">
+        </div>
         <h3>Distributed Data Analytics Platform</h3>
         <div class="period">Sep 2024 – Nov 2024</div>
         <ul>
@@ -816,6 +902,9 @@ Based in Pune, targeting Pune / Mumbai</div>
 
       <div class="proj-card glass-card reveal">
         <div class="proj-index">03</div>
+        <div class="proj-img-wrap">
+          <img src="project_ecommerce.png" alt="System Design & Backend — E-Commerce" loading="lazy">
+        </div>
         <h3>System Design & Backend — E-Commerce</h3>
         <div class="period">Dec 2024 – Jan 2025</div>
         <ul>
@@ -898,21 +987,9 @@ Based in Pune, targeting Pune / Mumbai</div>
   <div class="wrap">
     <div class="section-head reveal">
       <span class="section-tag">07 · Certifications</span>
-      <h2>Certifications & Badges</h2>
+      <h2>Certifications</h2>
     </div>
     <div class="cert-grid">
-      <div class="cert-card glass-card reveal">
-        <div class="cert-img-wrap">
-          <img src="Bages.png" alt="Google Developer Program Badges" loading="lazy">
-        </div>
-        <div class="cert-info">
-          <div>
-            <h4>Google Developer Program — Premium Tier</h4>
-            <div class="cert-source">Google Cloud · Firebase · NVIDIA</div>
-            <div class="cert-date">9 Badges · May 2024 – Feb 2026</div>
-          </div>
-        </div>
-      </div>
       <div class="cert-card glass-card reveal">
         <div class="cert-img-wrap">
           <img src="Kaggel.jpeg" alt="Kaggle Community Member Certificate" loading="lazy">
@@ -939,9 +1016,30 @@ Based in Pune, targeting Pune / Mumbai</div>
   </div>
 </section>
 
+<section id="badges">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">08 · Badges</span>
+      <h2>Developer Badges</h2>
+    </div>
+    <div class="badges-showcase glass-card reveal">
+      <div class="badges-img-wrap">
+        <img src="Bages.png" alt="Google Developer Program Badges" loading="lazy">
+      </div>
+      <div class="badges-content">
+        <h3>Google Developer Program — Premium Tier</h3>
+        <p class="badges-desc">A premium tier profile displaying official badges earned for milestones in cloud architecture, deploying Generative AI models with NVIDIA NIM on GKE, Firebase developer community, and Google Maps platform innovations.</p>
+        <div class="badge-tags">
+          <span>Google Cloud</span><span>Firebase</span><span>NVIDIA</span><span>Google Maps</span><span>GKE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="wrap">
-    <span class="section-tag reveal">08 · Contact</span>
+    <span class="section-tag reveal">09 · Contact</span>
     <h2 class="reveal">Let's build something reliable.</h2>
     <p class="reveal">Open to backend, DevOps, and full-stack SDE internships across Pune and Mumbai. Reach out — I reply fast.</p>
     <div class="contact-links reveal">
