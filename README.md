@@ -2,7 +2,9 @@
 
 A sleek, premium, developer-focused portfolio website designed for backend, DevOps, and full-stack SDE roles. Built with clean HTML5, custom vanilla CSS, and lightweight JavaScript featuring ambient glows, a noise overlay, and interactive terminal elements.
 
-🖥️ **Live Demo:** [https://elite-e-commerce-system-design.onrender.com/](https://elite-e-commerce-system-design.onrender.com/) *(E-commerce project showcase)*
+🖥️ **Live Demo:** [https://apmahajan.github.io/Portfolio/](https://apmahajan.github.io/Portfolio/)
+
+🛒 **E-commerce Project Showcase:** [https://elite-e-commerce-system-design.onrender.com/](https://elite-e-commerce-system-design.onrender.com/)
 
 ---
 
